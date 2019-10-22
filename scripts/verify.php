@@ -88,8 +88,8 @@ if (isset($_GET['txref'])) {
 
             // Send SMS Notification
             $SMS->send("GTA Models", "Dear {$firstName} {$lastName}. It's an honour to have you join us at Gracia The Arts as a model. We can't wait to work with you and we trust that the journey will be an exciting one. Let's do great stuff together!
-Love,
-The GTA Team.", $phone);
+            Love,
+            The GTA Team.", $phone);
 
             // Send Email
             $mg->sendHTMLEmail("Gracia The Arts Models <models@graciathearts.com>", $email, "Welcome to an exciting journey!", $emailBody);
