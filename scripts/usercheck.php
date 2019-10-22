@@ -51,7 +51,7 @@ if ($db->userExists($email, "modelsreg")) {
                 'customer_firstname' => $firstName,
                 'customer_lastname' => $lastName,
                 'custom_title' => 'Models Registration',
-                'custom_logo' => 'https://graciathearts.com/email/logo.png',
+                'custom_logo' => 'https://graciathearts.com/email/gta_logo.jpg',
                 'custom_description' => 'Registration for Gracia The Arts Models.',
                 'currency' => 'NGN',
                 'txref' =>  $transactionRef,

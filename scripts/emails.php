@@ -30,7 +30,7 @@ $emailBody = "<div class='es-wrapper-color' style='background-color: #f6f6f6;'>
 <table style='mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0px;' width='100%' cellspacing='0' cellpadding='0'>
 <tbody>
 <tr style='border-collapse: collapse;'>
-<td style='padding: 0; margin: 0;' align='center'><img style='display: block; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic;' src='https://graciathearts.com/email/logo.png' alt='AWLO Logo' width='99' height='99' /></td>
+<td style='padding: 0; margin: 0;' align='center'><img style='display: block; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic;' src='https://graciathearts.com/email/logo.png' alt='AWLO Logo' width='120' /></td>
 </tr>
 <tr style='border-collapse: collapse;'>
 <td style='padding: 20px; margin: 0;' align='center'>

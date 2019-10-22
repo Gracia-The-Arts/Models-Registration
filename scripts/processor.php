@@ -32,6 +32,7 @@ $twitter = $_POST['twitter'];
 $instagram = $_POST['instagram'];
 $facebook = $_POST['facebook'];
 $twitter = $_POST['twitter'];
+$skype = $_POST['skype'];
 
 $details = [
     "firstName"                     =>  $firstName,
@@ -47,7 +48,8 @@ $details = [
     "twitter"                       =>  $twitter,
     "instagram"                     =>  $instagram,
     "facebook"                      =>  $facebook,
-    "twitter"                       =>  $twitter
+    "twitter"                       =>  $twitter,
+    "skype"                         =>  $skype
 ];
 
 // Amount to be collected from the user
@@ -71,7 +73,7 @@ if ($db->insertUser("modelsreg", $details)) {
                 'customer_firstname' => $firstName,
                 'customer_lastname' => $lastName,
                 'custom_title' => 'Models Registration',
-                'custom_logo' => 'https://graciathearts.com/email/logo.png',
+                'custom_logo' => 'https://graciathearts.com/email/gta_logo.jpg',
                 'custom_description' => 'Registration for Gracia The Arts Models.',
                 'currency' => 'NGN',
                 'txref' =>  $transactionRef,
