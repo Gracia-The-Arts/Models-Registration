@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', e => {
   axios
     .post('scripts/display.php', { referrer: formdata })
     .then(response => {
-        // console.log(response.data)
+      // console.log(response.data)
       for (var i = 0; i < response.data.length; i++) {
         $('#data').append(
           '<tr><td>' +
@@ -32,15 +32,23 @@ document.addEventListener('DOMContentLoaded', e => {
             '</td><td>' +
             response.data[i].phone +
             '</td><td>' +
-            response.data[i].location +
+            response.data[i].address +
             '</td><td>' +
             response.data[i].occupation +
             '</td><td>' +
-            response.data[i].organisationName +
+            response.data[i].gender +
             '</td><td>' +
-            response.data[i].referrer +
+            response.data[i].linkedin +
             '</td><td>' +
-            response.data[i].created_at +
+            response.data[i].twitter +
+            '</td><td>' +
+            response.data[i].instagram +
+            '</td><td>' +
+            response.data[i].facebook +
+            '</td><td>' +
+            response.data[i].skype +
+            '</td><td>' +
+            response.data[i].registered_at +
             '</td><td>' +
             response.data[i].paid +
             '</td><td>' +

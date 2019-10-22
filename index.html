@@ -58,7 +58,7 @@
                         data-success="Yeah! Looks good."></span>
                 </div>
                 <div class="input-field col s12 m12 l4">
-                    <input id="middleName" type="text" class="validate initialCaps" name="middleName" required>
+                    <input id="middleName" type="text" class="validate initialCaps" name="middleName">
                     <label for="middleName">Your Middle Name</label>
                     <span class="helper-text" data-error="Oops! Please provide a name."
                         data-success="Yeah! Looks good."></span>
@@ -89,7 +89,7 @@
                 <div class="input-field col s12 l12">
                     <i class="material-icons prefix">location_on</i>
                     <!-- <label for="address">Location</label> -->
-                    <input type="text" id="location" name="location" required>
+                    <input type="text" id="address" name="address" placeholder="Enter your address" required>
                     <span class="helper-text" data-error="Please provide a valid address."
                         data-success="Great! You're good to go."></span>
                 </div>
@@ -98,7 +98,8 @@
                 <div class="input-field col s12 m12 l6">
                     <i class="material-icons prefix">date_range</i>
                     <!-- <label for="dateOfBirth">Date of Birth</label> -->
-                    <input type="text" class="datepicker validate" name="dateOfBirth" placeholder="Date of Birth" required>
+                    <input type="text" class="datepicker validate" name="dateOfBirth" placeholder="Date of Birth"
+                        required>
                     <span class="helper-text" data-error="Please provide your correct Date of Birth."
                         data-success="Great! You're good to go."></span>
                 </div>
@@ -110,36 +111,56 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col s12 m12 l12"> Do you own a business or work for an organisation?
-                    <div class="switch">
+                <div class="col s12 m12 l12"> Gender:
+                    <p>
                         <label>
-                            No
-                            <input type="checkbox" name="ownOrWorkForAnOrganisation" class="validate" value="yes">
-                            <span class="lever"></span>
-                            Yes
+                            <input name="gender" type="radio" value="Male" required />
+                            <span>Male</span>
                         </label>
-                        <span class="helper-text" data-error="This will help us know you better."
-                            data-success="Great! You're good to go."></span>
+                        <label>
+                            <input name="gender" value="Female" type="radio" />
+                            <span>Female</span>
+                        </label>
+                        <label>
+                            <input name="gender" value="Other" type="radio" />
+                            <span>Other</span>
+                        </label>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <p class="align-left">List your social media handles</p>
+                    <div class="row">
+                        <div class="input-field col s12 m6 l6">
+                            <span class="fab fa-linkedin prefix linkedin"></span>
+                            <input type="text" id="icon_prefix2" name="linkedin">
+                            <label for="icon_prefix2">linkedin url</label>
+                        </div>
+                        <div class="input-field col s12 m6 l6">
+                            <span class="fab fa-twitter prefix twitter"></span>
+                            <input type="text" id="icon_prefix4" name="twitter">
+                            <label for="icon_prefix4">twitter url</label>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12 m12 l12">
-                    <i class="material-icons prefix">business</i>
-                    <input id="organisationName" type="text" class="validate initialCaps" name="organisationName">
-                    <label for="organisationName">If yes, please input the organization's name</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12 m12 l12">Would you like AWLO to help you manage your travel booking and
-                    accommodation?
-                    <div class="switch">
-                        <label>
-                            No
-                            <input type="checkbox" name="manageMyTravel" class="validate" value="yes">
-                            <span class="lever"></span>
-                            Yes
-                        </label>
+                    <div class="row">
+                        <div class="input-field col s12 m6 l6">
+                            <span class="fab fa-instagram prefix instagram"></span>
+                            <input type="text" id="icon_prefix5" name="instagram">
+                            <label for="icon_prefix5">Instagram url</label>
+                        </div>
+                        <div class="input-field col s12 m6 l6">
+                            <span class="fab fa-facebook prefix facebook"></span>
+                            <input type="text" id="icon_prefix6" name="facebook">
+                            <label for="icon_prefix6">Facebook url</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 m6 l6">
+                            <span class="fab fa-skype prefix skype"></span>
+                            <input type="text" id="icon_prefix7" name="skype">
+                            <label for="icon_prefix7">Skype url</label>
+                        </div>
                     </div>
                 </div>
             </div>

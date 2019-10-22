@@ -187,6 +187,9 @@ select[required] {
   color: #0099ff !important;
   }
 
+  .fab.active {
+  color: #0099ff !important;
+  }
   .input-field label{
     pointer-events: all !important;
 }

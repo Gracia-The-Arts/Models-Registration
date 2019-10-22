@@ -48,11 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
           document.querySelector('#button').disabled = true
           swal(
             'Already Registered',
-            'You have already registered for the event.',
+            'You are already a registered Model.',
             'warning'
           )
           setTimeout(() => {
-            window.location = 'https://awlo.org/500'
+            window.location = 'https://graciathearts.com/models'
           }, 3000)
         } else if (response.data === 'no_user') {
           console.log(response.data)
@@ -81,10 +81,10 @@ document.addEventListener('DOMContentLoaded', () => {
       e.stopPropagation()
     }
 
-    // Get the referrer value from the URL
-    const referrer = window.location.href.slice(
-      window.location.href.indexOf('?') + 1
-    )
+    // // Get the referrer value from the URL
+    // const referrer = window.location.href.slice(
+    //   window.location.href.indexOf('?') + 1
+    // )
 
     // If form doesn't have validation errors
     if (form.checkValidity() === true) {
@@ -99,8 +99,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // Grab the form data
       const formdata = new FormData(form)
 
-      // Add the Referrer
-      formdata.append('referrer', referrer)
+    //   // Add the Referrer
+    //   formdata.append('referrer', referrer)
 
       // send it for processing
       axios

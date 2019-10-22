@@ -19,14 +19,14 @@ require './bootstrap.php';
 
 $email = $_POST['email'];
 
-if ($db->userExists($email, "awlo500reg")) {
+if ($db->userExists($email, "modelsreg")) {
     // Check to see if the user has paid
     // echo json_encode("user_exists");
-    if ($db->userExistsAndPaid($email, "awlo500reg")) {
+    if ($db->userExistsAndPaid($email, "modelsreg")) {
         echo json_encode("user_exists");
     } else {
         // Select the user
-        $result = $db->userSelect($email, "awlo500reg");
+        $result = $db->userSelect($email, "modelsreg");
         // get the phone number
         foreach ($result as $key => $value) {
             ${$key} = $value;
@@ -35,7 +35,7 @@ if ($db->userExists($email, "awlo500reg")) {
 
         // Run CURL
         $curl = curl_init();
-        $redirect_url = "https://awlo.org/500/register/scripts/verify.php";
+        $redirect_url = "https://graciathearts.com/models/registration/scripts/verify.php";
 
         curl_setopt_array(
             $curl,
@@ -50,9 +50,9 @@ if ($db->userExists($email, "awlo500reg")) {
                 'customer_phone' => $phone,
                 'customer_firstname' => $firstName,
                 'customer_lastname' => $lastName,
-                'custom_title' => 'AWLO-500',
-                'custom_logo' => 'https://awlo.org/wp-content/uploads/2019/01/awlox120.png',
-                'custom_description' => 'Enterprise Growth, Business Coaching, Access to Finance.',
+                'custom_title' => 'Models Registration',
+                'custom_logo' => 'https://graciathearts.com/email/logo.png',
+                'custom_description' => 'Registration for Gracia The Arts Models.',
                 'currency' => 'NGN',
                 'txref' =>  $transactionRef,
                 'PBFPubKey' => $raveKey,
