@@ -16,7 +16,7 @@
 body {
     /* background: #e7e7e7;
     background: rgb(231,231,231); */
-    background: linear-gradient(350deg, rgba(231,231,231,1) 0%, rgba(231,231,231,1) 60%, rgba(240,39,41,1) 60%, rgba(241,15,17,1) 100%);
+    background: linear-gradient(350deg, rgba(231,231,231,1) 0%, rgba(231,231,231,1) 60%, rgb(0, 153, 255) 60%, rgb(0, 153, 255) 100%);
 }
 
 div.row {
@@ -75,8 +75,8 @@ div.input-field {
   text-transform: lowercase!important;
 }
 #logo {
-  width: 10rem;
-  box-shadow: 0 0 3rem 0 #fff;
+  width: 16rem;
+  /* box-shadow: 0 0 3rem 0 #fff; */
 }
 
 #form {
@@ -106,7 +106,7 @@ select[required] {
 
 .btn {
     padding: 0px 40px 0px 40px;
-    background-color: #f10f11;
+    background-color: #0099ff;
 }
 
 .btn:focus {
@@ -160,7 +160,7 @@ select[required] {
 }
 
 #logo {
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 
 .pac-container:after{
@@ -171,20 +171,20 @@ select[required] {
 }
 
 .switch label input[type=checkbox]:checked+.lever:after {
-    background-color: #f10f11;
+    background-color: #0099ff;
 }
 
 /* label focus color */
  .input-field input:focus + label {
-   color: red !important;
+   color: #0099ff !important;
  }
  /* label underline focus color */
  .row .input-field input:focus {
-   border-bottom: 1px solid red !important;
-   box-shadow: 0 1px 0 0 red !important
+   border-bottom: 1px solid #0099ff !important;
+   box-shadow: 0 1px 0 0 #0099ff !important
  }
  .material-icons.active {
-  color: #f10f11 !important;
+  color: #0099ff !important;
   }
 
   .input-field label{
