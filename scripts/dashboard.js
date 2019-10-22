@@ -34,6 +34,8 @@ document.addEventListener('DOMContentLoaded', e => {
             '</td><td>' +
             response.data[i].address +
             '</td><td>' +
+            response.data[i].dateOfBirth +
+            '</td><td>' +
             response.data[i].occupation +
             '</td><td>' +
             response.data[i].gender +
